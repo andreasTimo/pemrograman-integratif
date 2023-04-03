@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package equipment;
+
+message Equipment {
+  string name = 1;
+  string type = 2;
+  int32 quantity = 3;
+}
+
+service EquipmentService {
+  rpc CreateEquipment(Equipment) returns (Equipment) {}
+  rpc ReadEquipment(Equipment) returns (Equipment) {}
+  rpc UpdateEquipment(Equipment) returns (Equipment) {}
+  rpc DeleteEquipment(Equipment) returns (Equipment) {}
+}
